@@ -1,0 +1,2 @@
+rvm use jruby-1.7.3@template-ui --create
+export JRUBY_OPTS=--1.9
