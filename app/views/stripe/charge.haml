@@ -1,0 +1,8 @@
+-if @error.nil?
+  %h3= "Thanks you paid $ #{@charge['amount']}"
+  %p
+    Your transaction id is
+    %strong= @stripe.id
+-else
+  %h3 Failed to make this transaction
+  %p= @error

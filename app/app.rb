@@ -5,6 +5,12 @@ class PadrinoUi < Padrino::Application
 
   enable :sessions
 
+  # Set Stripe keys
+  set :publishable_key, ENV['PUBLISHABLE_KEY']
+  set :secret_key, ENV['STRIPE_SECRET_KEY']
+
+  Stripe.api_key = settings.secret_key
+
   get :index do
     render "index"
   end

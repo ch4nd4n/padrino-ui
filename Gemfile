@@ -25,6 +25,7 @@ end
 # Padrino Stable Gem
 gem 'padrino', '0.11.2'
 
+gem 'stripe'
 # Or Padrino Edge
 # gem 'padrino', :git => 'git://github.com/padrino/padrino-framework.git'
 

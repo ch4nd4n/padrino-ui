@@ -1,11 +1,9 @@
 require 'spec_helper'
 
-describe "MainController" do
-  before do
-    get "/"
-  end
+describe "StripeController" do
 
   it "should respond ok" do
+    get "/"
     last_response.ok?
   end
 end

@@ -1,14 +1,20 @@
 <!doctype html>
 %html{:lang => "en"}
-%head
-  %meta{:charset => "UTF-8"}/
-  %title Padrino UI
-%body
-  %header
-    %h1
-      %a{:href => "/"} Padrino UI
-    %hr/
-  .content= yield
-  %footer
-    %hr/
-    No rights reserved!
+  %head
+    %meta{:charset => "UTF-8"}/
+    %link{:href=>"http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css", :rel=>"stylesheet"}
+    %link{:href=>"//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css", :rel=>"stylesheet"}
+    %title Stripe Example
+    %style
+      body{margin-top: 100px;}
+  %body
+    %header
+      .navbar.navbar-inverse.navbar-fixed-top
+        .navbar-inner
+          .container-fluid
+            %h1
+              %a.brand{:href => "/"} Padrino Stripe Example
+    .container-fluid= yield
+    %footer.container-fluid
+      %hr/
+      Some footer message

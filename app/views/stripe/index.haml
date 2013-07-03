@@ -1,0 +1,17 @@
+%form.payment{:action => url(:stripe, :charge), :method => "post"}
+  %p
+    %label Amount
+    %input{:type => "input", :name => "charge[amount]"}/
+  %p
+    %label Card Number
+    %input{:type => "input", :name => "card[number]"}/
+  %p
+    %label Expiry Date
+    = select_tag "card[month]", :options => (1..12).collect{|e| e.to_s}, :selected => 1
+    - this_year = Time.now.year
+    = select_tag "card[year]", :options => (this_year..(this_year+10)).collect{|e| e.to_s}, :selected => this_year.to_s
+  %p
+    %label CVV
+    %input{:type => "password", :name => "card[cvv]"}/
+  %p
+    %input{:type => "submit", :value => "Pay"}
