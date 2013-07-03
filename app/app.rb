@@ -6,7 +6,7 @@ class PadrinoUi < Padrino::Application
   enable :sessions
 
   get :index do
-    "Hello World"
+    render "index"
   end
 
   ##
